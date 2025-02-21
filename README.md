@@ -20,6 +20,17 @@ Format one or more threads
 % node format.js -d PATH_TO_MASTODON_ARCHIVE ID ...
 ```
 
+Make video posters for mp4s
+```
+% node format.js -d PATH_TO_TWITTER_ARCHVIE --videoposters > archive.html
+% cat archive.html |./makeposters.sh
+```
+
+Generate output suitable for merging with microblogging content from other sources
+```
+% node format.js --timestampids --styleprefix SOME_PREFIX -d PATH_TO_MASTODON_ARCHIVE
+```
+
 ## Requirements
 
 * Node (https://nodejs.org)
@@ -30,6 +41,6 @@ On MacOS:
 % npm install optparse
 ```
 
-Copyright (c) 2022 Greg Whitehead
+Copyright (c) 2022-2025 Greg Whitehead
 
 MIT License
